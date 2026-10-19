@@ -5,12 +5,14 @@
 
 NovaMatter is an evidence-oriented software ecosystem encompassing two consumer applications: **NovaLens**, which explores product and financial decisions alongside environmental impact, and **NovaLife**, which provides personalized planning and wellbeing support. The shared NovaMatter layer coordinates research and data-protection policies across these products.
 
-This directory contains **curated, nonconfidential source code** selected to demonstrate the underlying engineering. The application repositories and production services are not published here. These are implementation examples, not a standalone deployable app or a claim of independent model training.
+This repository contains **curated, nonconfidential source code** selected to demonstrate the underlying engineering. The application repositories and production services are not published here. These are implementation examples, not a standalone deployable app or a claim of independent model training.
 
 ## Quick code tour
 
 | Area | Explore | What the code demonstrates |
 | --- | --- | --- |
+| Shared gateway privacy | [Data classification and audit](novamatter/security-and-privacy-gateway.md) | Block/redact/minimize decisions and hashed audit metadata |
+| Cross-app research policy | [Gateway routing](novamatter/shared-intelligence-routing.md) | Product scopes, versioned policy, and sanitization before research |
 | Evidence-aware environmental analysis | [Water evidence resolver](novalens/src/lib/water.ts) | Source precedence, unit compatibility, contradictions, and explicit unknowns |
 | Verification tests | [Water evidence tests](novalens/src/lib/__tests__/water.test.ts) | Tests for the water-analysis evidence rules |
 | Quantitative decision tools | [Financial models](novalens/src/lib/advanced-finance.ts) | IRR root-finding, NPV, depreciation, and amortization |
@@ -39,3 +41,7 @@ This directory contains **curated, nonconfidential source code** selected to dem
 The `novalens/` and `novalife/` directories preserve source-relative paths for traceability. Some files depend on types, services, packages, or UI code that is intentionally absent from this public selection. The `novamatter/` documents contain explicitly labeled source excerpts from backend operations, not runnable copies of those services.
 
 These examples demonstrate implementation choices; they do **not**, by themselves, establish production scale, performance, or a security certification. For a short narrative overview, see [Engineering Notes](ENGINEERING_NOTES.md).
+
+## Portfolio demonstrations
+
+The Maker Portfolio contains an approximately 117-second combined NovaLens and NovaLife iPhone demonstration and selected source-code screenshots, submitted separately through MIT SlideRoom. Those media provide observed UI context for the code showcased here.
